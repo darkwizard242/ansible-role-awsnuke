@@ -1,0 +1,18 @@
+---
+# defaults file for aws-nuke
+
+awsnuke_app: aws-nuke
+awsnuke_version: 2.14.0
+awsnuke_osarch: linux-amd64
+awsnuke_dl_url: https://github.com/rebuy-de/{{ awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }}
+awsnuke_bin_path: /usr/local/bin
+awsnuke_file_mode: '0755'
+awsnuke_config_dir: "/etc/{{ awsnuke_app }}"
+awsnuke_config_dir_mode: '0744'
+awsnuke_config_dir_owner: root
+awsnuke_config_dir_group: root
+awsnuke_template_source: aws-nuke-config.yml.j2
+awsnuke_template_dest: aws-nuke-config.yml
+awsnuke_template_dest_mode: '0744'
+awsnuke_template_dest_owner: root
+awsnuke_template_dest_group: root
