@@ -1,0 +1,76 @@
+---
+# {{ ansible_managed }}
+
+regions:
+- us-east-1
+
+account-blacklist:
+- "123456789012"
+
+feature-flags:
+  disable-deletion-protection:
+    RDSInstance: true
+    EC2Instance: true
+
+accounts:
+  # AWS Account to nuke resources from.
+  "987654321987":
+    filters:
+    # To prevent nuking of following resources.
+    IAMUser:
+    - "admin"
+    IAMUserPolicyAttachment:
+    - "admin -> AdministratorAccess"
+    IAMUserAccessKey:
+    - "admin -> AKIA123456789123456"
+    IAMGroup:
+    - "Admins"
+    IAMRole:
+    - "AdminAccess"
+
+resource-types:
+  # Selectively nuke only the following resources
+  targets:
+  # - EC2Image
+  # - EC2Snapshot
+  # - LaunchConfiguration
+  # - EC2Volume
+  # - KMSKey
+  # - WAFRegionalWebACL
+  # - EC2Subnet
+  # - EC2DHCPOption
+  # - EC2Instance
+  # - EC2KeyPair
+  # - EC2KeyPair
+  # - RDSDBSubnetGroup
+  # - EC2NATGateway
+  # - ConfigServiceConfigurationRecorder
+  # - WAFRegionalIPSetIP
+  # - ACMCertificate
+  # - CloudFormationStack
+  # - WAFRegionalRegexPatternString
+  # - CloudTrail
+  # - S3Buckets
+  # - SSMParameter
+  # - RDSDBParameterGroup
+  # - ACMCertificate
+  # - SNSSubscription
+  # - KMSAlias
+  # - CloudWatchEventsTarget
+  # - CloudWatchEventsRule
+  # - ElasticacheSubnetGroup
+  # - CloudWatchAlarm
+  # - CloudWatchLogsLogGroup
+  # - SNSTopic
+  # - SNSSubscription
+  # - SQSQueue
+  # - SESIdentity
+  # - AWSBackupVault
+  # - LambdaFunction
+  # - S3Bucket
+  excludes:
+  # Exclude nuking of following resources
+  - IAMUser
+  - IAMRole
+  - IAMUserPolicyAttachment
+  - IAMGroup
