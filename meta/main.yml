@@ -1,0 +1,32 @@
+---
+galaxy_info:
+  role_name: awsnuke
+  author: Ali Muhammad
+  description: Installs/Uninstalls 'aws-buke' to destroy out all AWS resources.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - awsnuke
+    - aws
+    - system
+    - os
+    - cloud
+    - resources
+    - destruction
