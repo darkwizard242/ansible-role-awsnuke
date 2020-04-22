@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/darkwizard242/ansible-role-awsnuke.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-awsnuke) ![Ansible Role](https://img.shields.io/ansible/role/48107?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/48107?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/48107?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-awsnuke&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-awsnuke) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-awsnuke?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-awsnuke?color=orange&style=flat-square)
 
-# Ansible Role: aws-nuke
+# Ansible Role: awsnuke
 
 Role to install (_by default_) [aws-nuke](https://github.com/rebuy-de/aws-nuke) on **Debian/Ubuntu** and **EL** systems.
 
