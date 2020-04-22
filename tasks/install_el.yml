@@ -7,7 +7,7 @@
     dest: "{{ awsnuke_bin_path }}/{{ awsnuke_app }}"
     mode: "{{ awsnuke_file_mode }}"
 
-- name: "Setting up {{ awsnuke_app }} config directory on EL based systems."
+- name: "Setting up {{ awsnuke_app }} config directory {{ awsnuke_config_dir }} on EL based systems."
   file:
     path: "{{ awsnuke_config_dir }}"
     state: directory
