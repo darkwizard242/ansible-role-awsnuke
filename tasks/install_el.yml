@@ -1,13 +1,13 @@
 ---
-# tasks file for aws-nuke
+# tasks file for aws-nuke | EL Family
 
-- name: "Downloading archive for {{ awsnuke_app }} {{ awsnuke_version }} to {{ awsnuke_bin_path }} on EL based systems"
+- name: EL Family | Downloading archive for {{ awsnuke_app }} {{ awsnuke_version }} to {{ awsnuke_bin_path }}
   get_url:
     url: "{{ awsnuke_dl_url }}"
     dest: "{{ awsnuke_bin_path }}/{{ awsnuke_app }}"
     mode: "{{ awsnuke_file_mode }}"
 
-- name: "Setting up {{ awsnuke_app }} config directory {{ awsnuke_config_dir }} on EL based systems."
+- name: EL Family | Setting up {{ awsnuke_app }} config directory {{ awsnuke_config_dir }}
   file:
     path: "{{ awsnuke_config_dir }}"
     state: directory
@@ -15,7 +15,7 @@
     owner: "{{ awsnuke_config_dir_owner }}"
     group: "{{ awsnuke_config_dir_group }}"
 
-- name: "Setting up {{ awsnuke_app }} config file {{ awsnuke_template_dest }} in {{ awsnuke_config_dir }} on EL based systems."
+- name: EL Family | Setting up {{ awsnuke_app }} config file {{ awsnuke_template_dest }} in {{ awsnuke_config_dir }}
   template:
     src: "{{ awsnuke_template_source }}"
     dest: "{{ awsnuke_config_dir }}/{{ awsnuke_template_dest }}"
