@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: awsnuke
-  author: Ali Muhammad
+  author: darkwizard242
   description: Installs/Uninstalls 'aws-buke' to destroy out all AWS resources.
   company: none
   license: MIT
