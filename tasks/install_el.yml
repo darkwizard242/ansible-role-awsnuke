@@ -1,11 +1,16 @@
 ---
 # tasks file for aws-nuke | EL Family
 
-- name: EL Family | Downloading archive for {{ awsnuke_app }} {{ awsnuke_version }} to {{ awsnuke_bin_path }}
-  get_url:
-    url: "{{ awsnuke_dl_url }}"
-    dest: "{{ awsnuke_bin_path }}/{{ awsnuke_app }}"
-    mode: "{{ awsnuke_file_mode }}"
+- name: Debian/Ubuntu Family | Downloading and extracting {{ awsnuke_app }} {{ awsnuke_version }}
+  unarchive:
+    src: "{{ awsnuke_dl_url }}"
+    dest: "{{ awsnuke_bin_path }}"
+    owner: "{{ awsnuke_app_owner }}"
+    group: "{{ awsnuke_app_group }}"
+    extra_opts:
+      - --transform
+      - s/{{ awsnuke_app }}\-v{{ awsnuke_version }}\-linux\-amd64/{{ awsnuke_app }}/
+    remote_src: yes
 
 - name: EL Family | Setting up {{ awsnuke_app }} config directory {{ awsnuke_config_dir }}
   file:
