@@ -4,7 +4,9 @@
 awsnuke_app: aws-nuke
 awsnuke_version: 2.15.0
 awsnuke_osarch: linux-amd64
-awsnuke_dl_url: https://github.com/rebuy-de/{{ awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }}
+awsnuke_dl_url: https://github.com/rebuy-de/{{ awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }}.tar.gz
+awsnuke_app_owner: root
+awsnuke_app_group: root
 awsnuke_bin_path: /usr/local/bin
 awsnuke_file_mode: '0755'
 awsnuke_config_dir: "/etc/{{ awsnuke_app }}"
