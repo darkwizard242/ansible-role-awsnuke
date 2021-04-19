@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 awsnuke_app: aws-nuke
-awsnuke_version: 2.14.0
+awsnuke_version: 2.15.0
 awsnuke_osarch: linux-amd64
 awsnuke_dl_url: https://github.com/rebuy-de/{{ awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }}
 awsnuke_bin_path: /usr/local/bin
@@ -37,7 +37,7 @@ awsnuke_template_dest_group: root
 Variable                    | Value (default)                                                                                                                                        | Description
 --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------
 awsnuke_app                 | aws-nuke                                                                                                                                               | Defines the app to install i.e. **aws-nuke**
-awsnuke_version             | 2.14.0                                                                                                                                                 | Defined to dynamically fetch the desired version to install. Defaults to: **2.14.0**
+awsnuke_version             | 2.15.0                                                                                                                                                 | Defined to dynamically fetch the desired version to install. Defaults to: **2.15.0**
 awsnuke_osarch              | linux-amd64                                                                                                                                            | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
 awsnuke_dl_url              | <https://github.com/rebuy-de/{{> awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }} | Defines URL to download the awsnuke binary from.
 awsnuke_bin_path            | /usr/local/bin                                                                                                                                         | Defined to dynamically set the appropriate path to store awsnuke binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
