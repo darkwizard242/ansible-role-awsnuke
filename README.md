@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 awsnuke_app: aws-nuke
-awsnuke_version: 2.15.0
+awsnuke_version: 2.16.0
 awsnuke_osarch: linux-amd64
 awsnuke_dl_url: https://github.com/rebuy-de/{{ awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }}.tar.gz
 awsnuke_app_owner: root
@@ -39,7 +39,7 @@ awsnuke_template_dest_group: root
 Variable                    | Value (default)                                                                                                                                               | Description
 --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------
 awsnuke_app                 | aws-nuke                                                                                                                                                      | Defines the app to install i.e. **aws-nuke**
-awsnuke_version             | 2.15.0                                                                                                                                                        | Defined to dynamically fetch the desired version to install. Defaults to: **2.15.0**
+awsnuke_version             | 2.16.0                                                                                                                                                        | Defined to dynamically fetch the desired version to install. Defaults to: **2.16.0**
 awsnuke_osarch              | linux-amd64                                                                                                                                                   | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
 awsnuke_dl_url              | <https://github.com/rebuy-de/{{> awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }}.tar.gz | Defines URL to download the awsnuke binary from.
 awsnuke_config_dir_owner    | root                                                                                                                                                          | Owner of aws-nuke binary file.
