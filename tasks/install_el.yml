@@ -9,7 +9,7 @@
     group: "{{ awsnuke_app_group }}"
     extra_opts:
       - --transform
-      - s/{{ awsnuke_app }}\-v{{ awsnuke_version }}\-linux\-amd64/{{ awsnuke_app }}/
+      - s/{{ awsnuke_app }}\-v{{ awsnuke_version }}\-{{ awsnuke_os }}\-{{ awsnuke_arch }}/{{ awsnuke_app }}/
     remote_src: yes
 
 - name: EL Family | Setting up {{ awsnuke_app }} config directory {{ awsnuke_config_dir }}
