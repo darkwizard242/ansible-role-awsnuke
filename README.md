@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 awsnuke_app: aws-nuke
-awsnuke_version: 2.16.0
+awsnuke_version: 2.17.0
 awsnuke_osarch: linux-amd64
 awsnuke_dl_url: https://github.com/rebuy-de/{{ awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }}.tar.gz
 awsnuke_app_owner: root
@@ -36,25 +36,25 @@ awsnuke_template_dest_group: root
 
 ### Variables table:
 
-Variable                    | Value (default)                                                                                                                                               | Description
---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------
-awsnuke_app                 | aws-nuke                                                                                                                                                      | Defines the app to install i.e. **aws-nuke**
-awsnuke_version             | 2.16.0                                                                                                                                                        | Defined to dynamically fetch the desired version to install. Defaults to: **2.16.0**
-awsnuke_osarch              | linux-amd64                                                                                                                                                   | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
-awsnuke_dl_url              | <https://github.com/rebuy-de/{{> awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }}.tar.gz | Defines URL to download the awsnuke binary from.
-awsnuke_config_dir_owner    | root                                                                                                                                                          | Owner of aws-nuke binary file.
-awsnuke_config_dir_group    | root                                                                                                                                                          | Group of aws-nuke binary file.
-awsnuke_bin_path            | /usr/local/bin                                                                                                                                                | Defined to dynamically set the appropriate path to store awsnuke binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
-awsnuke_file_mode           | '0755'                                                                                                                                                        | Mode for the binary file of aws-nuke.
-awsnuke_config_dir          | "/etc/{{ awsnuke_app }}"                                                                                                                                      | Defined to create directory to store aws-nuke config file in.
-awsnuke_config_dir_mode     | '0744'                                                                                                                                                        | Permissions for aws-nuke config directory.
-awsnuke_config_dir_owner    | root                                                                                                                                                          | Owner of aws-nuke config directory.
-awsnuke_config_dir_group    | root                                                                                                                                                          | Group of aws-nuke config directory.
-awsnuke_template_source     | aws-nuke-config.yml.j2                                                                                                                                        | Source config template file to utilize.
-awsnuke_template_dest       | aws-nuke-config.yml                                                                                                                                           | Filename as to be placed in the configuration directory as for aws-nuke.
-awsnuke_template_dest_mode  | '0744'                                                                                                                                                        | Permission of aws-nuke configuration file.
-awsnuke_template_dest_owner | root                                                                                                                                                          | Owner of aws-nuke configuration file.
-awsnuke_template_dest_group | root                                                                                                                                                          | Group of aws-nuke configuration file.
+Variable                    | Description
+--------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------
+awsnuke_app                 | Defines the app to install i.e. **aws-nuke**
+awsnuke_version             | Defined to dynamically fetch the desired version to install. Defaults to: **2.17.0**
+awsnuke_osarch              | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
+awsnuke_dl_url              | Defines URL to download the awsnuke binary from.
+awsnuke_config_dir_owner    | Owner of aws-nuke binary file.
+awsnuke_config_dir_group    | Group of aws-nuke binary file.
+awsnuke_bin_path            | Defined to dynamically set the appropriate path to store awsnuke binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+awsnuke_file_mode           | Mode for the binary file of aws-nuke.
+awsnuke_config_dir          | Defined to create directory to store aws-nuke config file in.
+awsnuke_config_dir_mode     | Permissions for aws-nuke config directory.
+awsnuke_config_dir_owner    | Owner of aws-nuke config directory.
+awsnuke_config_dir_group    | Group of aws-nuke config directory.
+awsnuke_template_source     | Source config template file to utilize.
+awsnuke_template_dest       | Filename as to be placed in the configuration directory as for aws-nuke.
+awsnuke_template_dest_mode  | Permission of aws-nuke configuration file.
+awsnuke_template_dest_owner | Owner of aws-nuke configuration file.
+awsnuke_template_dest_group | Group of aws-nuke configuration file.
 
 ## Dependencies
 
