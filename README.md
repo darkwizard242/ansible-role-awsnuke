@@ -17,8 +17,9 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 awsnuke_app: aws-nuke
 awsnuke_version: 2.17.0
-awsnuke_osarch: linux-amd64
-awsnuke_dl_url: https://github.com/rebuy-de/{{ awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_osarch }}.tar.gz
+awsnuke_os: linux
+awsnuke_arch: amd64
+awsnuke_dl_url: https://github.com/rebuy-de/{{ awsnuke_app }}/releases/download/v{{ awsnuke_version }}/{{ awsnuke_app }}-v{{ awsnuke_version }}-{{ awsnuke_os }}-{{ awsnuke_arch }}.tar.gz
 awsnuke_app_owner: root
 awsnuke_app_group: root
 awsnuke_bin_path: /usr/local/bin
@@ -40,7 +41,8 @@ Variable                    | Description
 --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------
 awsnuke_app                 | Defines the app to install i.e. **aws-nuke**
 awsnuke_version             | Defined to dynamically fetch the desired version to install. Defaults to: **2.17.0**
-awsnuke_osarch              | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
+awsvault_os                 | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
+awsvault_arch               | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
 awsnuke_dl_url              | Defines URL to download the awsnuke binary from.
 awsnuke_config_dir_owner    | Owner of aws-nuke binary file.
 awsnuke_config_dir_group    | Group of aws-nuke binary file.
