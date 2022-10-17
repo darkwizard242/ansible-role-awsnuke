@@ -2,7 +2,7 @@
 # tasks file for aws-nuke | Debian/Ubuntu Family
 
 - name: Debian/Ubuntu Family | Downloading and extracting {{ awsnuke_app }} {{ awsnuke_version }}
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ awsnuke_dl_url }}"
     dest: "{{ awsnuke_bin_path }}"
     owner: "{{ awsnuke_app_owner }}"
@@ -13,7 +13,7 @@
     remote_src: yes
 
 - name: Debian/Ubuntu Family | Setting up {{ awsnuke_app }} config directory {{ awsnuke_config_dir }}
-  file:
+  ansible.builtin.file:
     path: "{{ awsnuke_config_dir }}"
     state: directory
     mode: "{{ awsnuke_config_dir_mode }}"
@@ -21,7 +21,7 @@
     group: "{{ awsnuke_config_dir_group }}"
 
 - name: Debian/Ubuntu Family | Setting up {{ awsnuke_app }} config file {{ awsnuke_template_dest }} in {{ awsnuke_config_dir }}
-  template:
+  ansible.builtin.template:
     src: "{{ awsnuke_template_source }}"
     dest: "{{ awsnuke_config_dir }}/{{ awsnuke_template_dest }}"
     mode: "{{ awsnuke_template_dest_mode }}"
